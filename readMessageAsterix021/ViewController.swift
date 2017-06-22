@@ -9,6 +9,12 @@
 import Cocoa
 
 class ViewController: NSViewController {
+    
+    @IBOutlet var ReadScroll: NSClipView!
+    
+    
+    @IBAction func readMess021(_ sender: Any) {
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
