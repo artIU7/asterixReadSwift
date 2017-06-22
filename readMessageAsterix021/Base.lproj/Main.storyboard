@@ -664,7 +664,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="message_cat021" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -686,9 +686,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pKY-Te-mrX">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pKY-Te-mrX">
                                 <rect key="frame" x="8" y="178" width="95" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="Klw-6v-SY1"/>
+                                </constraints>
                                 <buttonCell key="cell" type="push" title="Read_mess" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="K9s-If-UGL">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -697,23 +699,21 @@
                                     </connections>
                                 </buttonCell>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKB-Op-xaa">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKB-Op-xaa">
                                 <rect key="frame" x="20" y="228" width="253" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="ReadMessage Asterix021 v.1.4 " id="hHG-6L-L9E">
                                     <font key="font" metaFont="system" size="18"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEm-Ok-AXo">
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEm-Ok-AXo">
                                 <rect key="frame" x="111" y="20" width="355" height="186"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <clipView key="contentView" ambiguous="YES" id="hGr-GL-S3U">
+                                <clipView key="contentView" id="hGr-GL-S3U">
                                     <rect key="frame" x="1" y="1" width="353" height="184"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView ambiguous="YES" importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="hK6-Ka-9V1">
+                                        <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="hK6-Ka-9V1">
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="184"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -733,15 +733,28 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <progressIndicator wantsLayer="YES" fixedFrame="YES" maxValue="100" indeterminate="YES" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="uUN-po-SpN">
+                            <progressIndicator wantsLayer="YES" maxValue="100" indeterminate="YES" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="uUN-po-SpN">
                                 <rect key="frame" x="279" y="229" width="181" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </progressIndicator>
-                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="0IG-fK-ThK">
+                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="0IG-fK-ThK">
                                 <rect key="frame" x="280" y="105" width="16" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </progressIndicator>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="pEm-Ok-AXo" secondAttribute="bottom" constant="20" symbolic="YES" id="1Pk-r3-VR1"/>
+                            <constraint firstItem="AKB-Op-xaa" firstAttribute="centerY" secondItem="uUN-po-SpN" secondAttribute="centerY" id="4IG-9G-1Zb"/>
+                            <constraint firstAttribute="trailing" secondItem="uUN-po-SpN" secondAttribute="trailing" constant="20" symbolic="YES" id="8Dt-6h-whb"/>
+                            <constraint firstItem="pKY-Te-mrX" firstAttribute="top" secondItem="pEm-Ok-AXo" secondAttribute="top" id="ACH-87-XyP"/>
+                            <constraint firstItem="AKB-Op-xaa" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="22" id="GC2-Lt-ssB"/>
+                            <constraint firstItem="pEm-Ok-AXo" firstAttribute="centerY" secondItem="0IG-fK-ThK" secondAttribute="centerY" id="PqG-i8-Ko0"/>
+                            <constraint firstItem="pKY-Te-mrX" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="14" id="UWd-oI-l47"/>
+                            <constraint firstItem="pEm-Ok-AXo" firstAttribute="leading" secondItem="pKY-Te-mrX" secondAttribute="trailing" constant="14" id="Ugm-TG-voS"/>
+                            <constraint firstItem="0IG-fK-ThK" firstAttribute="centerX" secondItem="pEm-Ok-AXo" secondAttribute="centerX" id="WCc-Hj-oiq"/>
+                            <constraint firstAttribute="trailing" secondItem="pEm-Ok-AXo" secondAttribute="trailing" constant="14" id="Y5b-0c-zR5"/>
+                            <constraint firstItem="AKB-Op-xaa" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="fZ2-gQ-cpK"/>
+                            <constraint firstItem="uUN-po-SpN" firstAttribute="leading" secondItem="AKB-Op-xaa" secondAttribute="trailing" constant="8" symbolic="YES" id="fdo-rg-Hsf"/>
+                            <constraint firstItem="pKY-Te-mrX" firstAttribute="top" secondItem="AKB-Op-xaa" secondAttribute="bottom" constant="22" id="h23-vT-Kfd"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="ReadScroll" destination="hGr-GL-S3U" id="IDH-H9-kMW"/>

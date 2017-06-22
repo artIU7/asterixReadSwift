@@ -13,6 +13,7 @@
 		CB0797E71EFC16E600D27C09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0797E51EFC16E600D27C09 /* Main.storyboard */; };
 		CB0797F21EFC16E700D27C09 /* readMessageAsterix021Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0797F11EFC16E700D27C09 /* readMessageAsterix021Tests.swift */; };
 		CB0797FD1EFC16E700D27C09 /* readMessageAsterix021UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0797FC1EFC16E700D27C09 /* readMessageAsterix021UITests.swift */; };
+		CB07980B1EFC1D8F00D27C09 /* classCheckDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB07980A1EFC1D8F00D27C09 /* classCheckDirectory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		CB0797F81EFC16E700D27C09 /* readMessageAsterix021UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = readMessageAsterix021UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB0797FC1EFC16E700D27C09 /* readMessageAsterix021UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = readMessageAsterix021UITests.swift; sourceTree = "<group>"; };
 		CB0797FE1EFC16E700D27C09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB07980A1EFC1D8F00D27C09 /* classCheckDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = classCheckDirectory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				CB0797E31EFC16E600D27C09 /* Assets.xcassets */,
 				CB0797E51EFC16E600D27C09 /* Main.storyboard */,
 				CB0797E81EFC16E600D27C09 /* Info.plist */,
+				CB07980A1EFC1D8F00D27C09 /* classCheckDirectory.swift */,
 			);
 			path = readMessageAsterix021;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB07980B1EFC1D8F00D27C09 /* classCheckDirectory.swift in Sources */,
 				CB0797E21EFC16E600D27C09 /* ViewController.swift in Sources */,
 				CB0797E01EFC16E600D27C09 /* AppDelegate.swift in Sources */,
 			);
