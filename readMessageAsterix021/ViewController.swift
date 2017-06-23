@@ -24,6 +24,9 @@ class ViewController: NSViewController {
         let fromCheck = CheckDirectoryAsterix(fileManager: fileManager, dirWFile: dirWFile, fileName: fileName)
         let directoryWithFiles = fromCheck.checkDirectory() ?? "Empty"
         let path = (fromCheck.dirWFile as NSString).appendingPathComponent(directoryWithFiles)
+        // indicator bar show/hidden
+        IndicatorFieldLoad.isHidden = false
+       // IndicatorFieldLoad.isDrawingFindIndicator //= true
      IndicatorFieldLoad.startAnimation(Any?.self)
         do {
             let contentsOfFile = try NSString(contentsOfFile: path, encoding: UInt(aeBuildSyntaxUncoercedHex))
@@ -31,6 +34,8 @@ class ViewController: NSViewController {
             print("content of the file is: \(contentsOfFile)")
     IndicatorFieldLoad.stopAnimation(Any?.self)
     IndicatorFieldLoad.viewDidHide()
+          //  IndicatorFieldLoad..isHidden
+            IndicatorFieldLoad.isHidden = true
            } catch let error as NSError {
             print("there is an file reading error: \(error)")
         }
@@ -43,6 +48,8 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        IndicatorFieldLoad.isHidden = true
+
 
         // Do any additional setup after loading the view.
     }
