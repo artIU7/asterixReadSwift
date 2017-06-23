@@ -757,6 +757,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="IndicatorFieldLoad" destination="0IG-fK-ThK" id="b6I-z8-KBP"/>
                         <outlet property="ReadScroll" destination="hGr-GL-S3U" id="IDH-H9-kMW"/>
                     </connections>
                 </viewController>

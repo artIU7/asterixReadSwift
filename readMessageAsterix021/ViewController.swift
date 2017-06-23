@@ -10,6 +10,8 @@ import Cocoa
 
 class ViewController: NSViewController {
     
+    @IBOutlet weak var IndicatorFieldLoad: NSProgressIndicator!
+   
     @IBOutlet var ReadScroll: NSClipView!
     
    // Action for readMess
@@ -22,11 +24,14 @@ class ViewController: NSViewController {
         let fromCheck = CheckDirectoryAsterix(fileManager: fileManager, dirWFile: dirWFile, fileName: fileName)
         let directoryWithFiles = fromCheck.checkDirectory() ?? "Empty"
         let path = (fromCheck.dirWFile as NSString).appendingPathComponent(directoryWithFiles)
+     IndicatorFieldLoad.startAnimation(Any?.self)
         do {
             let contentsOfFile = try NSString(contentsOfFile: path, encoding: UInt(aeBuildSyntaxUncoercedHex))
             //*String.Encoding.utf8.rawValue*/)
             print("content of the file is: \(contentsOfFile)")
-        } catch let error as NSError {
+    IndicatorFieldLoad.stopAnimation(Any?.self)
+    IndicatorFieldLoad.viewDidHide()
+           } catch let error as NSError {
             print("there is an file reading error: \(error)")
         }
         //
