@@ -12,7 +12,11 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var IndicatorFieldLoad: NSProgressIndicator!
    
+    @IBOutlet weak var IndicatorLoad: NSProgressIndicator!
+    
     @IBOutlet var ReadScroll: NSClipView!
+    
+    @IBOutlet var ReadText: NSTextView!
     
    // Action for readMess
     @IBAction func readMess021(_ sender: Any) {
@@ -26,23 +30,18 @@ class ViewController: NSViewController {
         let path = (fromCheck.dirWFile as NSString).appendingPathComponent(directoryWithFiles)
         // indicator bar show/hidden
         IndicatorFieldLoad.isHidden = false
-       // IndicatorFieldLoad.isDrawingFindIndicator //= true
-     IndicatorFieldLoad.startAnimation(Any?.self)
+        IndicatorFieldLoad.startAnimation(Any?.self)
         do {
             let contentsOfFile = try NSString(contentsOfFile: path, encoding: UInt(aeBuildSyntaxUncoercedHex))
             //*String.Encoding.utf8.rawValue*/)
             print("content of the file is: \(contentsOfFile)")
-    IndicatorFieldLoad.stopAnimation(Any?.self)
-    IndicatorFieldLoad.viewDidHide()
-          //  IndicatorFieldLoad..isHidden
-            IndicatorFieldLoad.isHidden = true
+                IndicatorFieldLoad.stopAnimation(Any?.self)
+                IndicatorFieldLoad.isHidden = true
+          
+            ReadText.string = "68656c6c6f2c20776f726c64" as String
            } catch let error as NSError {
             print("there is an file reading error: \(error)")
         }
-        //
-        let sHex = CheckDirectoryAsterix(fileManager: fileManager, dirWFile: dirWFile, fileName: fileName)
-        sHex.dataWithHexString(hex: "68656c6c6f2c20776f726c64")
-        //
     }
  
 
