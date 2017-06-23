@@ -17,13 +17,14 @@ class ViewController: NSViewController {
         
         // Читаем
         let fileManager = FileManager()
-        let dirWFile = "/Users/stratienko.a/Desktop/asterixFile"
-        let fileName = "amber104.asterix"
+        let dirWFile = "/Users/stratienko.a/Desktop/AsteriX_021/readMessageAsterix021/input_asterix"
+        let fileName = "amber104-2012-07-09-17.stream"
         let fromCheck = CheckDirectoryAsterix(fileManager: fileManager, dirWFile: dirWFile, fileName: fileName)
         let directoryWithFiles = fromCheck.checkDirectory() ?? "Empty"
         let path = (fromCheck.dirWFile as NSString).appendingPathComponent(directoryWithFiles)
         do {
-            let contentsOfFile = try NSString(contentsOfFile: path, encoding: String.Encoding.utf8.rawValue)
+            let contentsOfFile = try NSString(contentsOfFile: path, encoding: UInt(aeBuildSyntaxUncoercedHex))
+            //*String.Encoding.utf8.rawValue*/)
             print("content of the file is: \(contentsOfFile)")
         } catch let error as NSError {
             print("there is an file reading error: \(error)")

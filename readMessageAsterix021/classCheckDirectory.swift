@@ -20,10 +20,12 @@ class CheckDirectoryAsterix{
                 let filesInDirectory = try fileManager.contentsOfDirectory(atPath: dirWFile)
                 let files = filesInDirectory
                 if files.count > 0 {
-                    if files.first == fileName { print("\(fileName) found")
+                    if files.first == fileName
+                    { print("\(fileName) found")
                         return files.first
-                    } else {
-                        print("File not found")
+                    } else
+                    {
+                        print("File \(fileName) not found")
                         return nil
                     }
                 }
@@ -38,7 +40,8 @@ class CheckDirectoryAsterix{
     func dataWithHexString(hex: String) -> Data {
         var hex = hex
         var data = Data()
-        while(hex.characters.count > 0) {
+        while(hex.characters.count > 0)
+        {
             let c: String = hex.substring(to: hex.index(hex.startIndex, offsetBy: 2))
             hex = hex.substring(from: hex.index(hex.startIndex, offsetBy: 2))
             var ch: UInt32 = 0
