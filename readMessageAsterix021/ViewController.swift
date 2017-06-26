@@ -13,9 +13,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var IndicatorFieldLoad: NSProgressIndicator!
    
     @IBOutlet weak var IndicatorLoad: NSProgressIndicator!
-    
-    @IBOutlet var ReadScroll: NSClipView!
-    
+
     @IBOutlet var ReadText: NSTextView!
     
    // Action for readMess
@@ -42,8 +40,23 @@ class ViewController: NSViewController {
            } catch let error as NSError {
             print("there is an file reading error: \(error)")
         }
+        // testing func seperate String from "decoderStreamHEX.swift"
+        let defineString = dEncodeMessCAT021()
+        let arraySep : [String] = ["UAP1","UAP2","UAP3","UAP4"]
+        // add item for mass [array] String
+        for dStr in arraySep {
+            defineString.addFromMessToArray(massString: dStr)
+        }
+        // call func seperate Mess from *.stream
+//defineString.separateStringFromMess(mess: arraySep[0])
+        // output three print's
+        for i in 0..<4{
+        print(arraySep[i])
+//        defineString.separateStringFromMess(mess: defineString.sepMess[i])
+        print(defineString.sepMess[i])
+      //  print(defineString.sepMess[i])
+             }
     }
- 
 
     override func viewDidLoad() {
         super.viewDidLoad()
