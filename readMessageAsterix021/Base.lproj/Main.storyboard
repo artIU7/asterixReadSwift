@@ -683,13 +683,13 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="readMessageAsterix021" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="485" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pKY-Te-mrX">
                                 <rect key="frame" x="8" y="178" width="95" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="83" id="pHI-n4-OxR"/>
+                                    <constraint firstAttribute="width" constant="83" id="Fs7-oQ-RRn"/>
                                 </constraints>
                                 <buttonCell key="cell" type="push" title="Read_mess" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="K9s-If-UGL">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -708,19 +708,19 @@
                                 </textFieldCell>
                             </textField>
                             <progressIndicator wantsLayer="YES" maxValue="100" indeterminate="YES" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="uUN-po-SpN">
-                                <rect key="frame" x="279" y="229" width="181" height="20"/>
+                                <rect key="frame" x="279" y="229" width="186" height="20"/>
                             </progressIndicator>
                             <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMq-wm-VZV">
-                                <rect key="frame" x="106" y="20" width="354" height="186"/>
+                                <rect key="frame" x="106" y="20" width="359" height="186"/>
                                 <clipView key="contentView" id="SuK-8Y-Ezs">
-                                    <rect key="frame" x="1" y="1" width="352" height="184"/>
+                                    <rect key="frame" x="1" y="1" width="357" height="184"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="8bd-kj-VGy">
-                                            <rect key="frame" x="0.0" y="0.0" width="352" height="184"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="357" height="184"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="352" height="184"/>
+                                            <size key="minSize" width="357" height="184"/>
                                             <size key="maxSize" width="463" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
@@ -732,39 +732,63 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Aiq-PZ-0qL">
-                                    <rect key="frame" x="337" y="1" width="16" height="184"/>
+                                    <rect key="frame" x="342" y="1" width="16" height="184"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
                             <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" doubleValue="25" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="0IG-fK-ThK">
-                                <rect key="frame" x="267" y="97" width="32" height="32"/>
+                                <rect key="frame" x="270" y="97" width="32" height="32"/>
+                            </progressIndicator>
+                            <progressIndicator wantsLayer="YES" maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="Xsa-kd-Q0o">
+                                <rect key="frame" x="279" y="251" width="181" height="20"/>
+                            </progressIndicator>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQd-Vn-3Ev">
+                                <rect key="frame" x="106" y="0.0" width="37" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="fcV-u1-uzR">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="Qfq-mh-VV0">
+                                <rect key="frame" x="468" y="253" width="16" height="16"/>
                             </progressIndicator>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="BMq-wm-VZV" firstAttribute="leading" secondItem="pKY-Te-mrX" secondAttribute="trailing" constant="9" id="5Mz-ML-0kr"/>
-                            <constraint firstItem="AKB-Op-xaa" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="8ip-JA-cSL"/>
-                            <constraint firstItem="BMq-wm-VZV" firstAttribute="centerY" secondItem="0IG-fK-ThK" secondAttribute="centerY" id="DoQ-5U-kXQ"/>
-                            <constraint firstAttribute="trailing" secondItem="uUN-po-SpN" secondAttribute="trailing" constant="20" symbolic="YES" id="IeO-8j-Dyt"/>
-                            <constraint firstItem="uUN-po-SpN" firstAttribute="trailing" secondItem="BMq-wm-VZV" secondAttribute="trailing" id="Sl5-z8-5fy"/>
-                            <constraint firstAttribute="bottom" secondItem="BMq-wm-VZV" secondAttribute="bottom" constant="20" symbolic="YES" id="Uiy-we-pGV"/>
-                            <constraint firstItem="uUN-po-SpN" firstAttribute="leading" secondItem="AKB-Op-xaa" secondAttribute="trailing" constant="8" symbolic="YES" id="arN-IC-caW"/>
-                            <constraint firstItem="AKB-Op-xaa" firstAttribute="centerY" secondItem="uUN-po-SpN" secondAttribute="centerY" id="d8N-vA-1wW"/>
-                            <constraint firstItem="pKY-Te-mrX" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="14" id="gpF-TZ-DSl"/>
-                            <constraint firstItem="0IG-fK-ThK" firstAttribute="centerX" secondItem="BMq-wm-VZV" secondAttribute="centerX" id="pUe-bm-clL"/>
-                            <constraint firstItem="pKY-Te-mrX" firstAttribute="top" secondItem="BMq-wm-VZV" secondAttribute="top" id="rA3-mM-wmE"/>
-                            <constraint firstItem="pKY-Te-mrX" firstAttribute="top" secondItem="AKB-Op-xaa" secondAttribute="bottom" constant="22" id="s0g-S6-3Ub"/>
-                            <constraint firstItem="AKB-Op-xaa" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="22" id="voC-Ah-U8x"/>
+                            <constraint firstAttribute="trailing" secondItem="Qfq-mh-VV0" secondAttribute="trailing" constant="1" id="0qv-vF-iv3"/>
+                            <constraint firstItem="XQd-Vn-3Ev" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="108" id="2hC-rH-6LI"/>
+                            <constraint firstItem="Xsa-kd-Q0o" firstAttribute="leading" secondItem="uUN-po-SpN" secondAttribute="leading" id="8jB-c8-G9h"/>
+                            <constraint firstItem="0IG-fK-ThK" firstAttribute="centerX" secondItem="BMq-wm-VZV" secondAttribute="centerX" id="9qI-wg-VN9"/>
+                            <constraint firstItem="pKY-Te-mrX" firstAttribute="top" secondItem="AKB-Op-xaa" secondAttribute="bottom" constant="22" id="CVG-ie-AuE"/>
+                            <constraint firstItem="uUN-po-SpN" firstAttribute="leading" secondItem="AKB-Op-xaa" secondAttribute="trailing" constant="8" symbolic="YES" id="Cfu-dg-4NZ"/>
+                            <constraint firstItem="BMq-wm-VZV" firstAttribute="centerY" secondItem="0IG-fK-ThK" secondAttribute="centerY" id="Chc-ZS-aUC"/>
+                            <constraint firstItem="Qfq-mh-VV0" firstAttribute="leading" secondItem="Xsa-kd-Q0o" secondAttribute="trailing" constant="8" symbolic="YES" id="Ghw-GW-X28"/>
+                            <constraint firstItem="AKB-Op-xaa" firstAttribute="centerY" secondItem="uUN-po-SpN" secondAttribute="centerY" id="KoX-XQ-cwJ"/>
+                            <constraint firstItem="pKY-Te-mrX" firstAttribute="top" secondItem="BMq-wm-VZV" secondAttribute="top" id="QNi-0H-kzh"/>
+                            <constraint firstAttribute="bottom" secondItem="XQd-Vn-3Ev" secondAttribute="bottom" id="a3g-bs-9kY"/>
+                            <constraint firstItem="AKB-Op-xaa" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="22" id="alZ-F5-mRO"/>
+                            <constraint firstAttribute="bottom" secondItem="BMq-wm-VZV" secondAttribute="bottom" constant="20" symbolic="YES" id="dLK-9U-IJJ"/>
+                            <constraint firstItem="Xsa-kd-Q0o" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="dlK-G5-FxU"/>
+                            <constraint firstItem="uUN-po-SpN" firstAttribute="trailing" secondItem="BMq-wm-VZV" secondAttribute="trailing" id="iRK-P3-iqQ"/>
+                            <constraint firstItem="pKY-Te-mrX" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="14" id="ine-go-yur"/>
+                            <constraint firstAttribute="trailing" secondItem="uUN-po-SpN" secondAttribute="trailing" constant="20" symbolic="YES" id="kw3-Mb-EC1"/>
+                            <constraint firstItem="Xsa-kd-Q0o" firstAttribute="centerY" secondItem="Qfq-mh-VV0" secondAttribute="centerY" id="nKs-As-1pr"/>
+                            <constraint firstItem="AKB-Op-xaa" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="nNL-GI-mlq"/>
+                            <constraint firstItem="BMq-wm-VZV" firstAttribute="leading" secondItem="pKY-Te-mrX" secondAttribute="trailing" constant="9" id="u1h-SR-O6H"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="IndiGrey" destination="Xsa-kd-Q0o" id="0wy-tr-I9x"/>
+                        <outlet property="IndicatorCallSepFunc" destination="Qfq-mh-VV0" id="9Oc-ld-DcM"/>
                         <outlet property="IndicatorFieldLoad" destination="0IG-fK-ThK" id="b6I-z8-KBP"/>
                         <outlet property="IndicatorLoad" destination="uUN-po-SpN" id="Ui0-rt-lZm"/>
+                        <outlet property="LabelOperation" destination="fcV-u1-uzR" id="9Kz-KW-Cdx"/>
                         <outlet property="ReadText" destination="8bd-kj-VGy" id="vJB-c4-v9S"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="77.5" y="655"/>
         </scene>
     </scenes>
 </document>

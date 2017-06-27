@@ -15,6 +15,7 @@
 		CB0797FD1EFC16E700D27C09 /* readMessageAsterix021UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0797FC1EFC16E700D27C09 /* readMessageAsterix021UITests.swift */; };
 		CB07980B1EFC1D8F00D27C09 /* classCheckDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB07980A1EFC1D8F00D27C09 /* classCheckDirectory.swift */; };
 		CB8987241EFD4AA200471D71 /* decoderStreamHEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8987231EFD4AA200471D71 /* decoderStreamHEX.swift */; };
+		CBB970891F013EB200ED9D53 /* confirmStringMessHEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB970881F013EB200ED9D53 /* confirmStringMessHEX.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		CB0797FE1EFC16E700D27C09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB07980A1EFC1D8F00D27C09 /* classCheckDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = classCheckDirectory.swift; sourceTree = "<group>"; };
 		CB8987231EFD4AA200471D71 /* decoderStreamHEX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = decoderStreamHEX.swift; sourceTree = "<group>"; };
+		CBB970881F013EB200ED9D53 /* confirmStringMessHEX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = confirmStringMessHEX.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				CB0797E81EFC16E600D27C09 /* Info.plist */,
 				CB07980A1EFC1D8F00D27C09 /* classCheckDirectory.swift */,
 				CB8987231EFD4AA200471D71 /* decoderStreamHEX.swift */,
+				CBB970881F013EB200ED9D53 /* confirmStringMessHEX.swift */,
 			);
 			path = readMessageAsterix021;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				CB07980B1EFC1D8F00D27C09 /* classCheckDirectory.swift in Sources */,
 				CB0797E21EFC16E600D27C09 /* ViewController.swift in Sources */,
 				CB0797E01EFC16E600D27C09 /* AppDelegate.swift in Sources */,
+				CBB970891F013EB200ED9D53 /* confirmStringMessHEX.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
