@@ -11,11 +11,10 @@
 		CB0797E21EFC16E600D27C09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0797E11EFC16E600D27C09 /* ViewController.swift */; };
 		CB0797E41EFC16E600D27C09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB0797E31EFC16E600D27C09 /* Assets.xcassets */; };
 		CB0797E71EFC16E600D27C09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0797E51EFC16E600D27C09 /* Main.storyboard */; };
-		CB0797F21EFC16E700D27C09 /* readMessageAsterix021Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0797F11EFC16E700D27C09 /* readMessageAsterix021Tests.swift */; };
-		CB0797FD1EFC16E700D27C09 /* readMessageAsterix021UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0797FC1EFC16E700D27C09 /* readMessageAsterix021UITests.swift */; };
 		CB07980B1EFC1D8F00D27C09 /* classCheckDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB07980A1EFC1D8F00D27C09 /* classCheckDirectory.swift */; };
 		CB8987241EFD4AA200471D71 /* decoderStreamHEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8987231EFD4AA200471D71 /* decoderStreamHEX.swift */; };
 		CBB970891F013EB200ED9D53 /* confirmStringMessHEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB970881F013EB200ED9D53 /* confirmStringMessHEX.swift */; };
+		CBBF938C1F02BD2B00DFF817 /* functionLoadMessageString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBF938B1F02BD2B00DFF817 /* functionLoadMessageString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,14 +42,11 @@
 		CB0797E61EFC16E600D27C09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB0797E81EFC16E600D27C09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB0797ED1EFC16E700D27C09 /* readMessageAsterix021Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = readMessageAsterix021Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB0797F11EFC16E700D27C09 /* readMessageAsterix021Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = readMessageAsterix021Tests.swift; sourceTree = "<group>"; };
-		CB0797F31EFC16E700D27C09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB0797F81EFC16E700D27C09 /* readMessageAsterix021UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = readMessageAsterix021UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB0797FC1EFC16E700D27C09 /* readMessageAsterix021UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = readMessageAsterix021UITests.swift; sourceTree = "<group>"; };
-		CB0797FE1EFC16E700D27C09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB07980A1EFC1D8F00D27C09 /* classCheckDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = classCheckDirectory.swift; sourceTree = "<group>"; };
 		CB8987231EFD4AA200471D71 /* decoderStreamHEX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = decoderStreamHEX.swift; sourceTree = "<group>"; };
 		CBB970881F013EB200ED9D53 /* confirmStringMessHEX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = confirmStringMessHEX.swift; sourceTree = "<group>"; };
+		CBBF938B1F02BD2B00DFF817 /* functionLoadMessageString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = functionLoadMessageString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				CB0797DE1EFC16E600D27C09 /* readMessageAsterix021 */,
-				CB0797F01EFC16E700D27C09 /* readMessageAsterix021Tests */,
-				CB0797FB1EFC16E700D27C09 /* readMessageAsterix021UITests */,
 				CB0797DD1EFC16E600D27C09 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,26 +103,9 @@
 				CB07980A1EFC1D8F00D27C09 /* classCheckDirectory.swift */,
 				CB8987231EFD4AA200471D71 /* decoderStreamHEX.swift */,
 				CBB970881F013EB200ED9D53 /* confirmStringMessHEX.swift */,
+				CBBF938B1F02BD2B00DFF817 /* functionLoadMessageString.swift */,
 			);
 			path = readMessageAsterix021;
-			sourceTree = "<group>";
-		};
-		CB0797F01EFC16E700D27C09 /* readMessageAsterix021Tests */ = {
-			isa = PBXGroup;
-			children = (
-				CB0797F11EFC16E700D27C09 /* readMessageAsterix021Tests.swift */,
-				CB0797F31EFC16E700D27C09 /* Info.plist */,
-			);
-			path = readMessageAsterix021Tests;
-			sourceTree = "<group>";
-		};
-		CB0797FB1EFC16E700D27C09 /* readMessageAsterix021UITests */ = {
-			isa = PBXGroup;
-			children = (
-				CB0797FC1EFC16E700D27C09 /* readMessageAsterix021UITests.swift */,
-				CB0797FE1EFC16E700D27C09 /* Info.plist */,
-			);
-			path = readMessageAsterix021UITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBBF938C1F02BD2B00DFF817 /* functionLoadMessageString.swift in Sources */,
 				CB8987241EFD4AA200471D71 /* decoderStreamHEX.swift in Sources */,
 				CB07980B1EFC1D8F00D27C09 /* classCheckDirectory.swift in Sources */,
 				CB0797E21EFC16E600D27C09 /* ViewController.swift in Sources */,
@@ -279,7 +257,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB0797F21EFC16E700D27C09 /* readMessageAsterix021Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +264,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB0797FD1EFC16E700D27C09 /* readMessageAsterix021UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

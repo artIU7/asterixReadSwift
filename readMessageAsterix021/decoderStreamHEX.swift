@@ -30,7 +30,7 @@ protocol decBigString{
         var buffl : String{get}
     var sepMess : [String]{get}
     
-    func separateStringFromMess(mess: String) -> [String]
+    func separateStringFromMess(sLmess: String) -> [String]
 }
 
 class dEncodeMessCAT021 : decBigString{
@@ -38,10 +38,17 @@ class dEncodeMessCAT021 : decBigString{
     var mess = 0.0,sMess = 0.0,nMess = 0.0,bMess = 0.0,lMess : Double = 0.0
     var buff = "",buffS = "",buffN = "",buffB = "",buffl = ""
     var sepMess : [String] = []
+    var sLmess : String = ""
     func addFromMessToArray(massString : String) {
         sepMess.append(massString)
     }
-    func separateStringFromMess(mess: String) -> [String]{
+    func separateStringFromMess(sLmess: String) -> [String]{
+        self.sLmess = sLmess
+        let moveIndexString = 64
+        let irds = sLmess.index(sLmess.startIndex,offsetBy: moveIndexString + i)
+        for isuse in sLmess.characters{
+            print(sLmess[irds])
+        }
     return sepMess
     }
 }
