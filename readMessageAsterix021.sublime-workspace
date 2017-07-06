@@ -1,0 +1,338 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"i",
+				"identifier"
+			],
+			[
+				"a",
+				"aida"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/stratienko.a/Desktop/AsteriX_021/readMessageAsterix021/input_asterix/amber104-2012-07-09-17.stream",
+		"/Users/stratienko.a/Desktop/LoadFromFile_unit.pas",
+		"/Users/stratienko.a/Desktop/asterixFile/amber104.stream",
+		"/Users/stratienko.a/Desktop/Folder_app/amber104.stream",
+		"/Users/stratienko.a/Desktop/Folder_app/txt.txt",
+		"/Users/stratienko.a/Desktop/Folder_app/amber_test.stream",
+		"/Users/stratienko.a/Desktop/Folder_app/amber_test",
+		"/Users/stratienko.a/Desktop/Folder_app/example.asterix",
+		"/Users/stratienko.a/Documents/ReleaseSSA/amber104.stream",
+		"/Users/stratienko.a/Desktop/StudioCompile/RootCore/out/AirnavigationLogic/ApronData.cpp",
+		"/Users/stratienko.a/Downloads/example.asterix",
+		"/Users/stratienko.a/Desktop/example.asterix",
+		"/Users/stratienko.a/Downloads/realm-mobile-platform/start-object-server.command",
+		"/Users/stratienko.a/Downloads/realm-mobile-platform/realm-object-server/object-server/configuration.yml",
+		"/Users/stratienko.a/Desktop/prj1.realm",
+		"/Users/stratienko.a/build-test_read_stream-Desktop_Qt_5_5_1_clang_64bit-Debug/amber104.stream",
+		"/Users/stratienko.a/build-test_read_stream-Desktop_Qt_5_5_1_clang_64bit-Debug/amber105.txt",
+		"/Users/stratienko.a/Documents/ReleaseSSA/LoadFromFile_unit.pas",
+		"/Users/stratienko.a/Documents/DATA_SW/Resourcess/FPDAMResourceExt.resx.xml",
+		"/Users/stratienko.a/Documents/DATA_SW/1 (апрель)/LayoutConfigurationEditor.xml",
+		"/Users/stratienko.a/Documents/DATA_SW/Resourcess/FPDAMResourceExt.resx",
+		"/Users/stratienko.a/Documents/DATA_SW/Resourcess/FPDAMResource.resx.xml",
+		"/Users/stratienko.a/Documents/DATA_SW/Resourcess/Out_FPDAMResource.resx.xml",
+		"/Users/stratienko.a/Documents/Универ/!xml_db/FPDAMResourceExt.xml",
+		"/Users/stratienko.a/Downloads/FPDAMResourceExt.resx.xml",
+		"/Users/stratienko.a/Documents/Универ/!xml_db/FPDAMResourceExt_test.xml",
+		"/Users/stratienko.a/Documents/DATA_SW/AeroChart_Setup.iss",
+		"/Volumes/UBCD/FPDAMResourceExt.resx",
+		"/Users/stratienko.a/Desktop/procedure DB_presence.xml",
+		"/Users/stratienko.a/Documents/DATA_SW/1 (апрель)/ChartManagerPlus.GUI.xml",
+		"/Users/stratienko.a/Documents/DATA_SW/1 (апрель)/ChartBuilder.xml",
+		"/Users/stratienko.a/Documents/DATA_SW/1 (апрель)/ChartManagerPlusEXE.xml",
+		"/Users/stratienko.a/Documents/DATA_SW/1 (апрель)/ChartOpenPlus.xml",
+		"/Users/stratienko.a/Documents/DATA_SW/1 (апрель)/LayoutConfiguration.xml",
+		"/Users/stratienko.a/Documents/DATA_SW/1 (апрель)/LayoutManager.xml",
+		"/Users/stratienko.a/Documents/DATA_SW/1 (апрель)/AeroChartStyleConfig.XML",
+		"/Users/stratienko.a/Documents/DATA_SW/out_resx/FPDAMResourceExt.resx",
+		"/Users/stratienko.a/Documents/DATA_SW/FPDAMResourceExt.resx.xml",
+		"/Users/stratienko.a/Documents/Универ/20_BDRL on localhost/TARGETS2.xml",
+		"/Users/stratienko.a/Documents/Универ/Origin_Resx/FPDAMResource.xml",
+		"/Users/stratienko.a/Documents/Универ/Origin_Resx/FPDAMResourceExt.resx",
+		"/Users/stratienko.a/Documents/Универ/Origin_Resx/FPDAMResource.resx",
+		"/Users/stratienko.a/Documents/Универ/!xml_db/testru.xml",
+		"/Users/stratienko.a/Documents/Универ/!xml_db/test.xml",
+		"/Users/stratienko.a/Documents/Универ/mdl.mki",
+		"/Users/stratienko.a/Documents/Универ/!xml_db/FPDAMResourceExt.resx",
+		"/Users/stratienko.a/Documents/xml/dombookmarks/ttt.xml",
+		"/Users/stratienko.a/Desktop/out_ttt.xbel",
+		"/Users/stratienko.a/Desktop/xml_verticalStructure/dombookmarks/out_xml.xml",
+		"/Users/stratienko.a/Desktop/xml_verticalStructure/dombookmarks/test_vert.xml",
+		"/Users/stratienko.a/Documents/Универ/!test_aixm/one_structure_ex.xml",
+		"/Users/stratienko.a/Desktop/xml_verticalStructure/dombookmarks/out_xml.xbel",
+		"/Users/stratienko.a/Desktop/xml_verticalStructure/dombookmarks/FPDAMResourceExt.xml",
+		"/Users/stratienko.a/Documents/Универ/!test_aixm/all_structure_ex.xml",
+		"/Users/stratienko.a/Desktop/vert_Structure.xml",
+		"/Users/stratienko.a/Desktop/Panda/05R_RNP_APCH_D.xml",
+		"/Users/stratienko.a/Desktop/Процедуры1/APP ILS DME _ DATA/12 APPROACH ILS DME_export DATA.xml",
+		"/Users/stratienko.a/Desktop/Процедуры1/APP ILS DME _ DATA/12 APPROACH ILS DME_export.xml",
+		"/Volumes/NO NAME/Процедуры1/APP ILS DME _ DATA/12 APPROACH ILS DME_export DATA.xml",
+		"/Users/stratienko.a/Downloads/heeg4-2/index.html",
+		"/Users/stratienko.a/Desktop/NETEnumeratorManager.cpp",
+		"/Users/stratienko.a/Documents/Универ/!xml_db/orig/FPDAMResourceExt.resx",
+		"/Users/stratienko.a/Documents/Универ/!xml_db/FPDAMResourceExt — копия.xml",
+		"/Users/stratienko.a/Documents/Универ/!xml_db/StringTest.xml",
+		"/Users/stratienko.a/Documents/Универ/xml_db/FPDAMResourceExt.xml",
+		"/Users/stratienko.a/Documents/Универ/!xml_db/FPDAMResourceExt_.resx",
+		"/Users/stratienko.a/Documents/Универ/!xml_db/FPDAMResourceExt_.xml",
+		"/Users/stratienko.a/Desktop/1234.xml",
+		"/Users/stratienko.a/Desktop/123.xml",
+		"/Users/stratienko.a/Documents/Универ/xml_db/FPDAMResourceExtRU.xml",
+		"/Users/stratienko.a/Documents/Универ/xml_db/StringTest.xml",
+		"/Users/stratienko.a/Documents/xml/dombookmarks/frank.xbel",
+		"/Users/stratienko.a/Documents/Универ/xml_db/FPDAMResourceExt_3.xml",
+		"/Users/stratienko.a/Documents/Универ/xml_db/FPDAMResourceExt_2.xml",
+		"/Users/stratienko.a/Desktop/1.xml",
+		"/Users/stratienko.a/Documents/xml/dombookmarks/test_dom.xbel",
+		"/Users/stratienko.a/Documents/xml/dombookmarks/jennifer.xbel",
+		"/Users/stratienko.a/Qt5.5.1/Examples/Qt-5.5/xml/streambookmarks/frank.xbel"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Volumes/D/VisualCode",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"a",
+			"ab",
+			"a",
+			"g",
+			"a",
+			"00 79",
+			"00 79 ",
+			"0079 7F5b ",
+			"8090",
+			"80",
+			"ndb",
+			"Duplicated",
+			"dupkicate",
+			"duplicate",
+			"duplicat",
+			"RNP<",
+			"<Root",
+			"<Resource",
+			"<resource",
+			"мин кг",
+			"min CG",
+			"message:AIXMBasicMessage",
+			"fpd",
+			"ids",
+			"verticalDatum",
+			"verti",
+			"ELL",
+			"ELL_08",
+			"EGM_08",
+			"ELL",
+			"ELM_08",
+			"EGM_08",
+			"Новые подарки",
+			"новые подарки",
+			"цветы лю",
+			"распродажа ду",
+			"Фигуры",
+			"Africana",
+			"Букеты цветов",
+			"Min CG",
+			"||",
+			"1b1d85dd-7b6f-48ea-b31a-8ae3bc7ba97b",
+			"\"ad02eb63-12d9-4ed2-9460-1a662e1dc55d\" = \"ad02eb63-12d9-4ed2-9460-1a662e1dc55d",
+			"\"ad02eb63-12d9-4ed2-9460-1a662e1dc55d\" = \"ad02eb63-12d9-4ed2-9460-1a662e1dc55d\"",
+			"986bdf58-51b0-410c-9d46-00219c8a-705d-44fa-914a-ч",
+			"986bdf58-51b0-410c-9d46-00219c8a-705d-44fa-914a-7b6814dda3e1",
+			"0c510927-b050-4d32-99d9-75dd1917-5c18-40e0-a54c-e5f05c52be7f",
+			"инитиализатион",
+			"World_",
+			"World",
+			"World_Miller_Cylindric",
+			"World_Miller_Cylindrica",
+			"PROJCS",
+			" PROJCS",
+			">epsg",
+			">ANS",
+			"ANS",
+			"WGE",
+			">WGS84",
+			">ANSI<",
+			">ANS<",
+			"ANS",
+			"crs",
+			"crsData",
+			"EUS",
+			"ED50",
+			"EEU",
+			"<value>E</value>",
+			"<value>W</value>",
+			"<value>S</value>",
+			"<value>N</value>",
+			"N",
+			"&#xd;",
+			"6a8328ed-c0c4-48a8-abe7-4eed61d9b5dc",
+			"f980ff90-ff44-448c-a343-6e40e80d3f1a",
+			"folder",
+			"separator",
+			"баз"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"a",
+			"g",
+			"ELL",
+			"Аминокислоты",
+			"Гейнеры",
+			"&&",
+			"OR",
+			"resource"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "",
+	"project": "readMessageAsterix021.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -50,14 +50,64 @@ class ViewController: NSViewController {
 
             //let inputString = try readLine()?.appending(path)//String(readpath)
             let allMess = try String(contentsOfFile: path, encoding: String.Encoding(rawValue: UInt(aeBuildSyntaxUncoercedHex))) //encoding: String.Encoding: UInt(ae)) )
-            var data = fileManager.contents(atPath: path)
+           // var data = fileManager.contents(atPath: path)
+            //var lengthasterixData =
+            //let lengthasterixData = dataFromFile_hex.length(dataFromFile_hex)
+            
+            
             dataFromFile_hex = try NSData(contentsOfFile: path)
- var df = 170
+            let lengthasterixData = dataFromFile_hex.length;
+            print("Вывод длины строки NSData = \(lengthasterixData)")
+          //  print(dataFromFile_hex.description)
+            
+            let bytesPointer = UnsafeMutableRawPointer.allocate(bytes: lengthasterixData, alignedTo: 2)
+            dataFromFile_hex.getBytes(bytesPointer, length: lengthasterixData)
+            print("Cout buffer(bytesPointer)\(bytesPointer)")
+            var massele = [UInt8]()
+           // massele.append(x)
+           // print(massele[0])
+            for listItemByte in 0...lengthasterixData-1{
+                 //115 //73
+                var SecondByte = bytesPointer+listItemByte
+                var xByte = SecondByte.load(as: UInt8.self)
+                massele.append(xByte)
+            }
+            
+           // let x = bytesPointer.load(as: UInt8.self) //115 //73
+            //let bytetwoPointer = bytesPointer+1
+           // let y = bytetwoPointer.load(as: UInt8.self) //116 //74
+           // let byteTreePointer = bytesPointer+2
+           // let z = byteTreePointer.load(as: UInt8.self) // 114 // 72
+           // let byteFourPointer = bytesPointer+3
+           // let i = byteFourPointer.load(as: UInt8.self) // 101 // 65
+           // let byteFivePointer = bytesPointer+4
+           // let k = byteFivePointer.load(as: UInt8.self) // 0 // 0 61
+
+            //print(x,y,z,i,k)
+         
+            bytesPointer.deallocate(bytes: lengthasterixData, alignedTo: 2)
+
+           // print("Output bingo =\(bingo)")
+       //     var rawPointer = UnsafeMutableRawPointer.allocate(bytes: lengthasterixData, alignedTo: 1)
+            
+            //rawPointer.storeBytes(of: dataFromFile_hex)
+      //  var  x = dataFromFile_hex.getBytes(rawPointer)
+ 
+      //      print(x)
+        //    var masArrayByte = String()
+          //  masArrayByte = dataFromFile_hex as String
+            
+            var df = 170
             print("Значение из NSData = ")
         
             
-         print(dataFromFile_hex.length)
-        print(dataFromFile_hex.bytes)
+            print(dataFromFile_hex.length)
+            print(dataFromFile_hex.bytes)
+            print(dataFromFile_hex)
+            
+          //  for dataItem in dataFromFile_hex {
+            //    print(dataItem)
+           // }
                     for lktd in 0..<dataFromFile_hex.length{
                 print(lktd)
             }
@@ -133,9 +183,11 @@ class ViewController: NSViewController {
             print("litF = \(litF)")
          
            //ReadText.string = "68656c6c6f2c20776f726c64" as String
-           } catch let error as NSError {
+           }
+                catch let error as NSError
+            {
             print("there is an file reading error: \(error)")
-        }
+            }
         // testing func seperate String from "decoderStreamHEX.swift"
         let defineString = dEncodeMessCAT021()
         let arraySep : [String] = ["UAP1","UAP2","UAP3","UAP4"]
