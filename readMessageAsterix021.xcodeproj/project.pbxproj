@@ -15,6 +15,8 @@
 		CB8987241EFD4AA200471D71 /* decoderStreamHEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8987231EFD4AA200471D71 /* decoderStreamHEX.swift */; };
 		CBB970891F013EB200ED9D53 /* confirmStringMessHEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB970881F013EB200ED9D53 /* confirmStringMessHEX.swift */; };
 		CBBF938C1F02BD2B00DFF817 /* functionLoadMessageString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBF938B1F02BD2B00DFF817 /* functionLoadMessageString.swift */; };
+		CBC618341F13DC6F001EC1B2 /* ConverterHEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC618331F13DC6F001EC1B2 /* ConverterHEX.swift */; };
+		CBE585091F264D280072A9C5 /* fromDelphi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE585081F264D280072A9C5 /* fromDelphi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		CB8987231EFD4AA200471D71 /* decoderStreamHEX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = decoderStreamHEX.swift; sourceTree = "<group>"; };
 		CBB970881F013EB200ED9D53 /* confirmStringMessHEX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = confirmStringMessHEX.swift; sourceTree = "<group>"; };
 		CBBF938B1F02BD2B00DFF817 /* functionLoadMessageString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = functionLoadMessageString.swift; sourceTree = "<group>"; };
+		CBC618331F13DC6F001EC1B2 /* ConverterHEX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConverterHEX.swift; path = readMessageAsterix021/ConverterHEX.swift; sourceTree = "<group>"; };
+		CBE585081F264D280072A9C5 /* fromDelphi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = fromDelphi.swift; path = extend_files/fromDelphi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		CB0797D31EFC16E600D27C09 = {
 			isa = PBXGroup;
 			children = (
+				CBC618331F13DC6F001EC1B2 /* ConverterHEX.swift */,
 				CB0797DE1EFC16E600D27C09 /* readMessageAsterix021 */,
 				CB0797DD1EFC16E600D27C09 /* Products */,
 			);
@@ -95,6 +100,7 @@
 		CB0797DE1EFC16E600D27C09 /* readMessageAsterix021 */ = {
 			isa = PBXGroup;
 			children = (
+				CBE585071F264D130072A9C5 /* extend_files */,
 				CB0797DF1EFC16E600D27C09 /* AppDelegate.swift */,
 				CB0797E11EFC16E600D27C09 /* ViewController.swift */,
 				CB0797E31EFC16E600D27C09 /* Assets.xcassets */,
@@ -106,6 +112,14 @@
 				CBBF938B1F02BD2B00DFF817 /* functionLoadMessageString.swift */,
 			);
 			path = readMessageAsterix021;
+			sourceTree = "<group>";
+		};
+		CBE585071F264D130072A9C5 /* extend_files */ = {
+			isa = PBXGroup;
+			children = (
+				CBE585081F264D280072A9C5 /* fromDelphi.swift */,
+			);
+			name = extend_files;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,9 +259,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBBF938C1F02BD2B00DFF817 /* functionLoadMessageString.swift in Sources */,
+				CBC618341F13DC6F001EC1B2 /* ConverterHEX.swift in Sources */,
 				CB8987241EFD4AA200471D71 /* decoderStreamHEX.swift in Sources */,
 				CB07980B1EFC1D8F00D27C09 /* classCheckDirectory.swift in Sources */,
 				CB0797E21EFC16E600D27C09 /* ViewController.swift in Sources */,
+				CBE585091F264D280072A9C5 /* fromDelphi.swift in Sources */,
 				CB0797E01EFC16E600D27C09 /* AppDelegate.swift in Sources */,
 				CBB970891F013EB200ED9D53 /* confirmStringMessHEX.swift in Sources */,
 			);
