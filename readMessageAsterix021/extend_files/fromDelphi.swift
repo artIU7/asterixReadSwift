@@ -6,6 +6,9 @@
   import Foundation
   import Cocoa
   
+  
+  
+  // sub cls/prt convert UInt8 to String
   protocol UInt8toString{
     var value : UInt8{get}
     var dataIntTemp : Int {get}
@@ -18,21 +21,20 @@
        var value: UInt8 = 0
         var dataIntTemp: Int = 0
          var sValue: String = ""
-    
- 
     func U8toStr(value : UInt8) -> String
     {
+        dataIntTemp = Int(value)
+        sValue = String(dataIntTemp)
         return sValue
     }
-    
   }
-  
+  // end
   //create protocol
   protocol LoadFromFiles
   {
     var SourceFilesStream : String{get}
         var bbyte: UInt8{get}
-            var s : UInt8{get}
+            var s : String{get}
                 var sMess : String{get}
                     var sHex : UInt8{get}
                         var sHexbefore : String{get}
@@ -49,7 +51,7 @@
   class LoadStream: LoadFromFiles{
         var SourceFilesStream : String = ""
             var bbyte: UInt8 = 0
-                var s : UInt8 = 0
+                var s : String = ""
                     var sMess : String = ""
                         var sHex : UInt8 = 0
                             var sHexbefore : String = ""
@@ -59,26 +61,32 @@
                                             var NumRead : Int = 0
                                                 var iValue : Int = 0
                                                     var kMess : Int = 0
-    var yCreate : Int = 0   // год создания файла *.stream
+    var yCreate : String = ""   // год создания файла *.stream
     let mCreate : Int = 0   // месяц создания файла
     let dCreate : Int = 0   // день создания файла
     var ink : Int = 0
     
                                                         func LoadFiles(InputArray:[UInt8])-> String{
                                                           // computed Years Create File from ATM PC
-                                                            for slow in InputArray{
-                                                                if ink == 8 {
-                                                                    sHex = slow
-                                                                    s = s + sHex
-                                                                }
+                                                            let subConv = fromUi8()
                                                             
+                                                            for slow in InputArray{
                                                                 if ink == 9 {
                                                                     sHex = slow
-                                                                    s = s + sHex
-                                                                    yCreate = Int(s)
+                                                                    s = s + subConv.U8toStr(value : sHex)
+                                                                    yCreate = s
                                                                 }
+                                                            
+                                                                //if ink == 9 {
+                                                                //    sHex = slow
+                                                                //    s = s + subConv.U8toStr(value : sHex)
+                                                                 //   yCreate = s
+                                                               // }
                                                                 ink += 1
                                                             }
+                                                            var HexValue = hexConvertDec(charHex: sHex)
+                                                            var rHex = HexValue.DecHexTo(charHex: sHex)
+                                                            print("Out rHex = \(rHex)")
                                                             // end
         
         /*Reset(SourceFileStream, 1);
