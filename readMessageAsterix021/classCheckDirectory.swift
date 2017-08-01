@@ -62,5 +62,8 @@ class CheckDirectoryAsterix{
         self.fileName = fileName
 
     }
+    init(){
+        
+    }
 
 }

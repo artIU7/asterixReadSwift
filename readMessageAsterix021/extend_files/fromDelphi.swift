@@ -62,31 +62,36 @@
                                                 var iValue : Int = 0
                                                     var kMess : Int = 0
     var yCreate : String = ""   // год создания файла *.stream
+    var yCreateU : UInt8 = 0
     let mCreate : Int = 0   // месяц создания файла
     let dCreate : Int = 0   // день создания файла
     var ink : Int = 0
     
                                                         func LoadFiles(InputArray:[UInt8])-> String{
                                                           // computed Years Create File from ATM PC
-                                                            let subConv = fromUi8()
-                                                            
+                                                            var rHex8 = String()
+                                                            var rHex9 = String()
+                                                            var rString = UInt8()
                                                             for slow in InputArray{
-                                                                if ink == 9 {
-                                                                    sHex = slow
-                                                                    s = s + subConv.U8toStr(value : sHex)
-                                                                    yCreate = s
+                                                                if ink == 8
+                                                                    {
+                                                                        sHex = slow
+                                                                            let HexValue8 = hexConvertDec(charHex: sHex)
+                                                                                 rHex8 = HexValue8.DecHexTo(charHex: sHex)
+                                                                    }
+                                                                            if ink == 9
+                                                                    {
+                                                                        sHex = slow
+                                                                            let HexValue9 = hexConvertDec(charHex: sHex)
+                                                                                 rHex9 = HexValue9.DecHexTo(charHex: sHex)
                                                                 }
-                                                            
-                                                                //if ink == 9 {
-                                                                //    sHex = slow
-                                                                //    s = s + subConv.U8toStr(value : sHex)
-                                                                 //   yCreate = s
-                                                               // }
                                                                 ink += 1
                                                             }
-                                                            var HexValue = hexConvertDec(charHex: sHex)
-                                                            var rHex = HexValue.DecHexTo(charHex: sHex)
-                                                            print("Out rHex = \(rHex)")
+                                                            yCreate = rHex8 + rHex9
+                                                            print("Out yCreate = \(yCreate)")
+                                                            var sValue = hexConvertDec()
+                                                                yCreateU = sValue.HexDecTo(charString: yCreate)
+                                                               //     print("from Hex rString = \(rString)")
                                                             // end
         
         /*Reset(SourceFileStream, 1);

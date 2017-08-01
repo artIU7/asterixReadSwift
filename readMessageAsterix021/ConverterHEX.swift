@@ -7,13 +7,15 @@
 //
 
 import Foundation
+import Cocoa
 
 
 // first protocol needing converting from Hex to Dec 
 // 115 = 73
 protocol isHexString {
     var charHex : UInt8    {get}
-    func DecHexTo(charHex: UInt8)-> UInt8
+    func DecHexTo(charHex: UInt8)-> String
+    func HexDecTo(charString : String) -> UInt8
     
 }
 
@@ -24,6 +26,9 @@ class hexConvertDec: isHexString{
     init(charHex:UInt8) {
         self.charHex = charHex
 
+    }
+    init(){
+        charHex = 0
     }
     func dCh(charL : UInt8) -> String
     {
@@ -63,43 +68,52 @@ class hexConvertDec: isHexString{
         return ""
     }
     
-    func DecHexTo(charHex: UInt8) -> UInt8 {
+    func DecHexTo(charHex: UInt8) -> String {
         
-        var buf : String
+        var Varible : UInt8
+        var Ni : UInt8
+        var InterVar : UInt8
+        var RezComputed : UInt8
+        var buffV : String
         var result = [UInt8]()
-        buf = ""
-        let sSysHex : UInt8 = 16
+        let countRes : Int
+        buffV = ""
+        var nValue : String
+        Ni = 16
+        Varible = charHex
+       
+        
         // 1 var - N10
         // 2 var - kSystem Letter
         // 3 var - bufresult
         // 4 var - result
-        if (charHex >= sSysHex){
-        for ini in result
-        {
-            var i : Int
-            i = 0
-            if result[i] == 0 {
-                break;
+        nValue = ""
+        var dig_Letter = ""
+        result.removeAll()
+        if (charHex >= Ni){
+            repeat
+            {
+                InterVar = Varible/Ni
+                RezComputed = InterVar*Ni
+                result.append(Varible-RezComputed)
+                Varible = InterVar
             }
-            if result[i]<sSysHex{
-                break;
+                while InterVar > Ni
+            result.append(InterVar)
+            countRes = result.count
+            for intt in 0..<countRes{
+                dig_Letter = dCh(charL: result[countRes - 1 - intt])
+                nValue.append(dig_Letter)
+                //nValue.insert(contentsOf: dig_Letter.characters, at: nValue.index(before: nValue.endIndex))
+
             }
-            result[i] = charHex%sSysHex
-            
-        }
         } else
         {
-             dCh(charL: charHex)
+             dig_Letter = dCh(charL: charHex)
+                nValue = dig_Letter
         }
-        var nValue : UInt8
-        nValue = 0
-       
         
-        for ini in result{
-        let i : Int = 0
-            
-            nValue = result[i]+nValue
-        }
+        
         //buf = 0
        // buf = dCh(charL: charHex)
         // needing create start/stop id for computed xMess String from asterix (cat - 021)
@@ -109,4 +123,101 @@ class hexConvertDec: isHexString{
         
         return nValue
     }
+    // HecDecTo
+    func GetDigit(ALetter: String) -> UInt8
+    {
+        var result = UInt8()
+        //let Aletter = String.self
+        switch ALetter{
+        case "0":  result = 0
+        case "1" : result = 1
+        case "2" : result = 2
+        case "3" : result = 3
+        case "4" : result = 4
+        case "5" : result = 5
+        case "6" : result = 6
+        case "7" : result = 7
+        case "8" : result = 8
+        case "9" : result = 9
+        case "A" : result = 10
+        case "B" : result = 11
+        case "C" : result = 12
+        case "D" : result = 13
+        case "E" : result = 14
+        case "F" : result = 15
+        default : result = 0
+    }
+        
+        return result
+    }
+    
+        
+    enum ArithmeticExpersion {
+        
+        case Number (Int)
+        
+        indirect case Addition(ArithmeticExpersion, ArithmeticExpersion)
+        indirect case Substraction(ArithmeticExpersion,ArithmeticExpersion)
+        indirect case Division(ArithmeticExpersion,ArithmeticExpersion)
+        indirect case Multiplication(ArithmeticExpersion,ArithmeticExpersion)
+        indirect case Pow(ArithmeticExpersion,ArithmeticExpersion)
+        func ecaluate(expression : ArithmeticExpersion? = nil) -> UInt8 {
+            let expression = (expression == nil ? self : expression)
+            switch expression! {
+            case .Number(let value) :
+                return UInt8(value)
+            // сложение
+            case  .Addition(let valueleft ,let  valueright):
+                return self.ecaluate(expression: valueleft) + self.ecaluate(expression: valueright)
+            // вычитание
+            case .Substraction( let  valueleft, let valueright) :
+                return self.ecaluate(expression: valueleft) - self.ecaluate(expression: valueright)
+            // деление
+            case .Division(let valueLeft, let valueRight) :
+                return self.ecaluate(expression: valueLeft) / self.ecaluate(expression: valueRight)
+            // умножение
+            case .Multiplication(let valueLeft, let valueRight) :
+                return self.ecaluate(expression: valueLeft) * self.ecaluate(expression: valueRight)
+            // возведение в степень
+            case .Pow(let valueLeft, let valueRight) :
+                var result = UInt8(1)
+                for _ in 1...self.ecaluate(expression: valueRight) {
+                    result *= self.ecaluate(expression: valueLeft)
+                }
+                return UInt8(result)
+            }
+        }
+    }
+    
+    
+    func HexDecTo(charString: String) -> UInt8 {
+        var charString = String()
+        var arrayUint8 = [UInt8]()
+        var arrayString = [String]()
+        var i : Int
+        var Num : UInt8
+            Num = 0
+    let sizeChar = charString.characters.count
+        
+        for lls in 0..<charString.characters.count {
+           // arrayString.insert(sHels, at: i)
+            let index = charString.index(charString.startIndex, offsetBy: lls)
+            arrayString.append(String(charString[index]))
+            print("ArrayString = \(arrayString[lls])")
+                   }
+        for i in 0..<sizeChar{
+            let expr = ArithmeticExpersion.Pow(.Number(16), .Number(sizeChar - 1 - i))
+            expr.ecaluate()
+            
+            Num = Num + expr.ecaluate() * GetDigit(ALetter: arrayString[i])
+        print("Num = \(Num)")
+        }
+    //Num:=Num+trunc(power(16, Length(Hex)-i))*StrToInt(GetDigit(Hex[i]));
+    //end;
+    //result:=Num;
+    //end;
+    ////
+        
+        return Num
+}
 }

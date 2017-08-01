@@ -86,7 +86,9 @@ class ViewController: NSViewController {
             
                 let sLoadFiles = LoadStream()
                     sLoadFiles.LoadFiles(InputArray: massele)
-                print(sLoadFiles.yCreate)
+                print("Cout yCreate = \(sLoadFiles.yCreate)")
+                    print("UInt8 Hex = \(sLoadFiles.yCreateU)")
+                
           /*  if massele[0] == 115
             {
             print(massele[0])
