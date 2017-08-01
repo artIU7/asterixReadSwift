@@ -10,6 +10,9 @@ import Cocoa
 var dString : String = ""
 class ViewController: NSViewController {
     
+    @IBOutlet weak var DateCreate: NSDatePickerCell!
+    
+    @IBOutlet weak var DateComp: DateComponentsFormatter!
     @IBOutlet weak var IndicatorFieldLoad: NSProgressIndicator!
    
     @IBOutlet weak var IndicatorLoad: NSProgressIndicator!
@@ -86,8 +89,42 @@ class ViewController: NSViewController {
             
                 let sLoadFiles = LoadStream()
                     sLoadFiles.LoadFiles(InputArray: massele)
-                print("Cout yCreate = \(sLoadFiles.yCreate)")
-                    print("UInt8 Hex = \(sLoadFiles.yCreateU)")
+            var Year = Int()
+            let Month = Int()
+            let Day = Int()
+            // Year
+                    print("Cout yCreate = \(sLoadFiles.yCreate)")
+                        print("UInt8 + UInt9 Hex = \(sLoadFiles.yCreateU)")
+            Year = Int(sLoadFiles.yCreateU)
+            //=====
+            // Month
+                    print("Cout mCreate = \(sLoadFiles.mCreate)")
+                        print("UInt10 Hex = \(sLoadFiles.mCreateU)")
+            //=====
+            // Day
+                    print("Cout dCreate = \(sLoadFiles.dCreate)")
+                        print("UInt11 Hex = \(sLoadFiles.dCreateU)")
+            //=====
+            var fulldate = DateComponents()
+            fulldate.year = Int(sLoadFiles.yCreateU)
+            fulldate.month = Int(sLoadFiles.mCreateU)
+            fulldate.day = Int(sLoadFiles.dCreateU)
+            print("Cout Date = \(fulldate)")
+            
+          //  fff = DateCreate.calendar?.date(from: fulldate)
+          //  DateCreate.calendar? = Calendar(identifier: DateCreate.calendar?.date(from: fulldate))
+          //  DateComp.string(from: fulldate)
+            
+            
+              /*let maxValue1 = UInt.max
+            let maxValue2 = UInt8.max
+            let maxValue3 = UInt16.max
+            let maxValue4 = UInt32.max
+            print("UInt = \(maxValue1)")
+            print("UInt8 = \(maxValue2)")
+            print("UInt16 = \(maxValue3)")
+            print("UInt32 = \(maxValue4)")*/
+            
                 
           /*  if massele[0] == 115
             {

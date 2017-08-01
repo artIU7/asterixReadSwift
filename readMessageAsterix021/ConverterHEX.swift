@@ -14,8 +14,9 @@ import Cocoa
 // 115 = 73
 protocol isHexString {
     var charHex : UInt8    {get}
+    var charString: String  {get}
     func DecHexTo(charHex: UInt8)-> String
-    func HexDecTo(charString : String) -> UInt8
+    func HexDecTo(charString : String) -> UInt
     
 }
 
@@ -23,13 +24,13 @@ class hexConvertDec: isHexString{
    
     var charHex: UInt8
     var DigLetter: [String]?
-    init(charHex:UInt8) {
+    var charString: String
+    init(charHex:UInt8,charString : String) {
         self.charHex = charHex
-
+        self.charString = charString
     }
-    init(){
-        charHex = 0
-    }
+    
+   
     func dCh(charL : UInt8) -> String
     {
         if charL == 0 {
@@ -124,9 +125,9 @@ class hexConvertDec: isHexString{
         return nValue
     }
     // HecDecTo
-    func GetDigit(ALetter: String) -> UInt8
+    func GetDigit(ALetter: String) -> UInt
     {
-        var result = UInt8()
+        var result = UInt()
         //let Aletter = String.self
         switch ALetter{
         case "0":  result = 0
@@ -161,11 +162,11 @@ class hexConvertDec: isHexString{
         indirect case Division(ArithmeticExpersion,ArithmeticExpersion)
         indirect case Multiplication(ArithmeticExpersion,ArithmeticExpersion)
         indirect case Pow(ArithmeticExpersion,ArithmeticExpersion)
-        func ecaluate(expression : ArithmeticExpersion? = nil) -> UInt8 {
+        func ecaluate(expression : ArithmeticExpersion? = nil) -> UInt {
             let expression = (expression == nil ? self : expression)
             switch expression! {
             case .Number(let value) :
-                return UInt8(value)
+                return UInt(value)
             // сложение
             case  .Addition(let valueleft ,let  valueright):
                 return self.ecaluate(expression: valueleft) + self.ecaluate(expression: valueright)
@@ -180,22 +181,26 @@ class hexConvertDec: isHexString{
                 return self.ecaluate(expression: valueLeft) * self.ecaluate(expression: valueRight)
             // возведение в степень
             case .Pow(let valueLeft, let valueRight) :
-                var result = UInt8(1)
+                var result = UInt(1)
+                if ecaluate(expression: valueRight) != 0 {
                 for _ in 1...self.ecaluate(expression: valueRight) {
                     result *= self.ecaluate(expression: valueLeft)
                 }
-                return UInt8(result)
+                } else {
+                    result = 1
+                }
+                return UInt(result)
             }
         }
     }
     
     
-    func HexDecTo(charString: String) -> UInt8 {
-        var charString = String()
-        var arrayUint8 = [UInt8]()
+    func HexDecTo(charString: String) -> UInt {
+        //self.charString = charString
+        var arrayUint8 = [UInt]()
         var arrayString = [String]()
         var i : Int
-        var Num : UInt8
+        var Num : UInt
             Num = 0
     let sizeChar = charString.characters.count
         
@@ -203,14 +208,14 @@ class hexConvertDec: isHexString{
            // arrayString.insert(sHels, at: i)
             let index = charString.index(charString.startIndex, offsetBy: lls)
             arrayString.append(String(charString[index]))
-            print("ArrayString = \(arrayString[lls])")
+           // print("ArrayString = \(arrayString[lls])")
                    }
         for i in 0..<sizeChar{
-            let expr = ArithmeticExpersion.Pow(.Number(16), .Number(sizeChar - 1 - i))
+            let expr = ArithmeticExpersion.Pow(.Number(16), .Number(sizeChar - i - 1))
             expr.ecaluate()
-            
-            Num = Num + expr.ecaluate() * GetDigit(ALetter: arrayString[i])
-        print("Num = \(Num)")
+            let Gdig = GetDigit(ALetter: arrayString[i])
+            let rsPow = expr.ecaluate()
+            Num = Num + rsPow * Gdig
         }
     //Num:=Num+trunc(power(16, Length(Hex)-i))*StrToInt(GetDigit(Hex[i]));
     //end;

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G24b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <capability name="cells containing NSDateComponentsFormatter" minSystemVersion="10.12"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -753,6 +754,18 @@
                             <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="Qfq-mh-VV0">
                                 <rect key="frame" x="468" y="253" width="16" height="16"/>
                             </progressIndicator>
+                            <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o1r-1H-116">
+                                <rect key="frame" x="3" y="142" width="98" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="Pkl-J0-RcP">
+                                    <dateComponentsFormatter key="formatter" unitsStyle="positional" id="ZHF-jf-W5S">
+                                        <zeroFormattingBehavior key="zeroFormattingBehavior" none="YES"/>
+                                    </dateComponentsFormatter>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                </datePickerCell>
+                            </datePicker>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Qfq-mh-VV0" secondAttribute="trailing" constant="1" id="0qv-vF-iv3"/>
@@ -778,6 +791,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="DateComp" destination="ZHF-jf-W5S" id="Qra-Dn-hUL"/>
+                        <outlet property="DateCreate" destination="Pkl-J0-RcP" id="2Kq-3i-Jm4"/>
                         <outlet property="IndiGrey" destination="Xsa-kd-Q0o" id="0wy-tr-I9x"/>
                         <outlet property="IndicatorCallSepFunc" destination="Qfq-mh-VV0" id="9Oc-ld-DcM"/>
                         <outlet property="IndicatorFieldLoad" destination="0IG-fK-ThK" id="b6I-z8-KBP"/>
